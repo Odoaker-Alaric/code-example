@@ -1,0 +1,115 @@
+*, *:before, *:after
+    box-sizing border-box
+    background-repeat no-repeat
+
+*
+    font-variant-ligatures none
+    font-feature-settings 'liga' 0
+    -webkit-font-smoothing antialiased
+
+html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dt, dl, dd, fieldset, figure, figcaption, blockquote
+    margin 0
+    padding 0
+
+h1, h2, h3, h4
+    line-height 1.2
+    font-weight 400
+
+ul, ol
+    list-style none
+
+b
+    font-weight bold
+
+abbr[title]
+    text-decoration none
+
+button, a
+    touch-action manipulation
+    background none
+    padding 0
+
+button, input, textarea
+    font-size inherit
+    font-family inherit
+    box-shadow none
+    border none
+
+strong, b
+    font-weight bold
+
+input, textarea, button, select, label, a
+    -webkit-tap-highlight-color rgba(0, 0, 0, 0)
+    -webkit-tap-highlight-color transparent
+
+img
+    max-width 100%
+    height auto
+    display block
+
+img[src='#']
+    display none !important
+
+//a[href="#todo"]
+//outline 1px dotted $red
+
+//*:focus
+//outline 1px solid $orange
+//outline-offset 3px
+body, html
+    height 100%
+    width 100%
+
+html
+    font-size 62.5%
+
+    &.is-scrolling-disabled
+        overflow hidden
+
+body
+    font-size 1.3rem
+    line-height (17 / 13)
+    font-family $font-muli
+    color $color10
+    background $color1
+
+    .is-scrolling-disabled
+        //overflow hidden
+        position fixed
+        top 0
+        left 0
+        width 100%
+        min-height 100%
+
+p
+    margin-bottom (20 / 15em)
+
+    &:last-child
+        margin-bottom 0
+
+a
+    color inherit
+    //text-decoration underline
+    text-decoration none
+
+img
+    max-width 100%
+    height auto
+    display block
+
+img[data-src], img[data-srcset]
+    &:not(.u-noLazyFade)
+        @media $medium-up
+            transition opacity .5s ease-out
+
+    &.is-lazy
+        opacity 0
+
+        .no-js &
+            display none
+
+    &.is-lazy-loading
+        opacity 0
+
+    &.is-lazy-loaded
+        opacity 1

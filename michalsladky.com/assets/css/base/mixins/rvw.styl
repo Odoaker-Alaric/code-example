@@ -1,0 +1,9 @@
+rvw($low = 1, $high = 5, units = 'rem', $lowMedia = $viewports.medium.min, $highMedia = $viewports.large.max)
+    
+    $a = ($low - $high) / ((remove-unit($lowMedia) * 16) - (remove-unit($highMedia) * 16)) 
+    $b = $low - ($a * (remove-unit($lowMedia) * 16))
+    
+    if units = 'px'
+        return 'calc(%s + %s)' % (($a * 100vw) ($b * 1px))
+    else
+        return 'calc(%s + %s)' % (($a * 100vw) ($b * .1rem))

@@ -1,0 +1,78 @@
+$color1 = #17232b
+$color2 = #2F4858
+$color3 = #2F4858
+$color4 = #5B6475
+$color5 = #858190
+$color6 = #ACA2AB
+$color8 = #BFBBBB
+$color7 = #CFC6C9
+$color8 = #E2E3E3
+$color10 = #EFEBEB
+
+$green = #6BAE3E
+$red = #AB2624
+
+$font-muli = 'Muli', sans-serif
+
+$colors = {
+    'green': $green,
+    'red': $red,
+    'color1': $color1
+    'color2': $color2
+    'color3': $color3
+    'color4': $color4
+    'color5': $color5
+    'color6': $color6
+    'color7': $color7
+    'color8': $color8
+    'color9': $color9
+    'color10': $color10
+}
+
+$viewports = {
+    xsmall:     {min: 0,  max: 359},
+    small:     {min: 360,  max: 539},
+    smallWide: {min: 540,  max: 767},
+    medium:    {min: 768,  max: 1023},
+    large:     {min: 1024, max: 1199},
+    xlarge:    {min: 1200, max: 1399},
+    xxlarge:   {min: 1400, max: 1919},
+    xxxlarge:  {min: 1920}
+}
+
+// change to em values
+for $type, $range in $viewports
+    $boundaries = {}
+    for $boundary, $value in $range
+        $boundaries[$boundary] = $value/16em;
+    $viewports[$type] = $boundaries;
+
+$xsmall-up = 'screen and (min-width: ' + $viewports.xsmall.min + ')'
+$xsmall-only = $xsmall-up + ' and (max-width: ' + $viewports.xsmall.max + ')'
+$xsmall-max = 'screen and (max-width: ' + $viewports.xsmall.max + ')'
+
+$small-up = 'screen and (min-width: ' + $viewports.small.min + ')'
+$small-only = $small-up + ' and (max-width: ' + $viewports.small.max + ')'
+$small-max = 'screen and (max-width: ' + $viewports.small.max + ')'
+
+$small-wide-up = 'screen and (min-width: ' + $viewports.smallWide.min + ')'
+$small-wide-only = $small-wide-up + ' and (max-width: ' + $viewports.smallWide.max + ')'
+$small-wide-max = 'screen and (max-width: ' + $viewports.smallWide.max + ')'
+
+$medium-up = 'screen and (min-width: ' + $viewports.medium.min + ')'
+$medium-only = $medium-up + ' and (max-width: ' + $viewports.medium.max + ')'
+$medium-max = 'screen and (max-width: ' + $viewports.medium.max + ')'
+
+$large-up = 'screen and (min-width: ' + $viewports.large.min + ')'
+$large-only = $large-up + ' and (max-width: ' + $viewports.large.max + ')'
+$large-max = 'screen and (max-width: ' + $viewports.large.max + ')'
+
+$xlarge-up = 'screen and (min-width: ' + $viewports.xlarge.min + ')'
+$xlarge-only = $xlarge-up + ' and (max-width: ' + $viewports.xlarge.max + ')'
+$xlarge-max = 'screen and (max-width: ' + $viewports.xlarge.max + ')'
+
+$xxlarge-up = 'screen and (min-width: ' + $viewports.xxlarge.min + ')'
+$xxlarge-only = $xxlarge-up + ' and (max-width: ' + $viewports.xxlarge.max + ')'
+$xxlarge-max = 'screen and (max-width: ' + $viewports.xxlarge.max + ')'
+
+$xxxlarge-up = 'screen and (min-width: ' + $viewports.xxxlarge.min + ')'

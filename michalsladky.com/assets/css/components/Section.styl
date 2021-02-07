@@ -1,0 +1,150 @@
+.Section
+    padding-top 40px
+    padding-bottom 40px
+    position relative
+    transition opacity .4s ease
+
+    @media $medium-up
+        padding-top vw(90)
+        padding-bottom vw(90)
+
+    @media $xlarge-up
+        padding-top 90px
+        padding-bottom 90px
+
+    html.is-animating &
+        opacity 0
+
+    &--fat
+        padding-top 50px
+        padding-bottom 50px
+
+        @media $medium-up
+            padding-top vw(160)
+            padding-bottom vw(160)
+
+        @media $xlarge-up
+            padding-top 160px
+            padding-bottom 160px
+
+    &--slim
+        padding-top 20px
+        padding-bottom 20px
+
+        @media $medium-up
+            padding-top vw(50)
+            padding-bottom vw(50)
+
+        @media $xlarge-up
+            padding-top 50px
+            padding-bottom 50px
+
+    &--medium
+        padding-top 30px
+        padding-bottom 30px
+
+        @media $medium-up
+            padding-top vw(80)
+            padding-bottom vw(80)
+
+        @media $xlarge-up
+            padding-top 80px
+            padding-bottom 80px
+
+    &--bare
+        padding-top 0
+        padding-bottom 0
+
+        @media $medium-up
+            padding-top 0
+            padding-bottom 0
+
+        @media $xlarge-up
+            padding-top 0
+            padding-bottom 0
+
+    &--appended
+        padding-top 0
+
+        @media $medium-up
+            padding-top 0
+
+        @media $xlarge-up
+            padding-top 0
+
+    &--prepended
+        padding-bottom 0
+
+        @media $medium-up
+            padding-bottom 0
+
+        @media $xlarge-up
+            padding-bottom 0
+
+    &--white
+        background white
+
+    &-title
+        font-family $font-worksans
+        color $brown
+        font-weight 700
+        margin-bottom 20px
+
+        @media $large-up
+            opacity .25
+
+        &--spaceBottom
+            margin-bottom 35px
+
+    &-footer
+        display flex
+        justify-content space-between
+        flex-flow row wrap
+        padding-top 20px
+
+    &-arrow
+        display none
+
+        @media $medium-up
+            display block
+            position absolute
+            width 0
+            height 0
+            border-style solid
+            border-color transparent transparent transparent $brown
+            border-width 60px 0 60px 600px
+            filter drop-shadow(11px 8px 7px rgba(0,0,0,0.3))
+
+        &--top
+            top -60px
+            left -450px
+
+        &--right
+            border-color transparent $brown transparent transparent
+            border-width 60px 600px 60px 0
+            right -450px
+            left auto
+
+        &--bottom
+            bottom -60px
+
+    // &--shadow
+    //     position relative
+    //     overflow hidden
+    //     background rgba($brown,.02)
+
+    //     &:after,
+    //     &:before
+    //         content ''
+    //         display block
+    //         width 100%
+    //         position absolute
+    //         left 0
+    //         height 30px
+    //         box-shadow 0 0 50px 0 rgba($brown,.3)
+
+    //     &:after
+    //         top -30px
+
+    //     &:before
+    //         bottom -30px

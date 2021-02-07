@@ -1,0 +1,71 @@
+.Modal
+  position fixed
+  top 0
+  right 0
+  bottom 0
+  left 0
+  visibility hidden
+  opacity 0
+  justify-content center
+  align-items center
+  background rgba(0, 0, 0, .7)
+  z-index 10
+  transition .3s all
+  display flex
+  padding 0 15px 0 10px
+
+  &-window
+    display flex
+    flex-flow column
+    justify-content space-between
+    min-width 100px
+    min-height 100px
+    background-color white
+    position relative
+    box-shadow 0 0 4px 0 #444
+    transform scale(.9)
+    transition .3s all
+
+  &-header
+    padding 1em 2rem
+    background var(--color-primary-light)
+
+  &-body
+    padding 1em 2rem
+
+  &-footer
+    padding 1em 2rem
+    background var(--color-primary-light)
+
+  &-close
+    position absolute
+    right -.5em
+    top -.5em
+    width 1.5em
+    height 1.5em
+    background var(--color-primary-light)
+    //border-radius: 50%;
+    box-shadow 0 0 2px 0 #444
+    transition .2s all
+
+    &--light
+      background-color white
+
+    &:hover
+      cursor pointer
+      background-color var(--color-primary)
+
+.Modal
+  &.is-open
+    opacity 1
+    visibility visible
+
+  &.is-open &__window
+    transform scale(1)
+
+  &.is-closing
+    opacity 0
+    visibility hidden
+
+.body.is-modal-open
+  {}
